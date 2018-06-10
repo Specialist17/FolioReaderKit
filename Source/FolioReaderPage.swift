@@ -236,7 +236,6 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
         guard let url = request.url else { return false }
 
         if scheme == "highlight" || scheme == "highlight-with-note" {
-            shouldShowBar = false
 
             guard let decoded = url.absoluteString.removingPercentEncoding else { return false }
             let index = decoded.index(decoded.startIndex, offsetBy: 12)
